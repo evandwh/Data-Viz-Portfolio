@@ -1,3 +1,4 @@
-## Health Risk & Cost Analysis: Exploring U.S. Health Trends by Age and Region
+## State-by-State Comparison of Obesity, Mental Health, and ADHD in U.S. Adults (2022)
 
-Analyze health-related data (like chronic conditions, insurance costs, or mortality) and visualize trends by age, gender, and geography. Discuss risk implications like an actuary would.  This should capture every element of what careers I could possibly take once I have some projects finished.
+Goal:
+Analyze the geographic variation of public health issues — obesity, mental health status, and ADHD diagnoses — using BRFSS data.
