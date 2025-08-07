@@ -10,8 +10,8 @@ import os
 import pandas as pd
 
 # Define the path to the uploaded ZIP file
-zip_path = ""
-extract_dir = ""
+zip_path = "health-risk-analysis/data/MMSA22_ASC.zip"
+extract_dir = "health-risk-analysis/data/"
 
 # Extract the ZIP file
 with ZipFile(zip_path, 'r') as zip_ref:
@@ -20,7 +20,6 @@ with ZipFile(zip_path, 'r') as zip_ref:
 # List extracted files
 extracted_files = os.listdir(extract_dir)
 extracted_files
-
 
 # Define the file path
 asc_file_path = os.path.join(extract_dir, 'MMSA22.ASC')
@@ -113,3 +112,4 @@ print(df_filtered.head())
 # Additional analysis or processing can be done here
 
 # End of script
+
