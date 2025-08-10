@@ -10,8 +10,8 @@ import os
 import pandas as pd
 
 # Define the path to the uploaded ZIP file
-zip_path = "health-risk-analysis/data/MMSA22_ASC.zip"
-extract_dir = "health-risk-analysis/data/"
+zip_path = "C:\\Users\\edwhi\\Downloads\\MMSA22_ASC.zip"
+extract_dir = "C:\\Users\\edwhi\\OneDrive\\Desktop\\Portfolio Projects\\Health Study\\Data"
 
 # Extract the ZIP file
 with ZipFile(zip_path, 'r') as zip_ref:
@@ -20,6 +20,7 @@ with ZipFile(zip_path, 'r') as zip_ref:
 # List extracted files
 extracted_files = os.listdir(extract_dir)
 extracted_files
+
 
 # Define the file path
 asc_file_path = os.path.join(extract_dir, 'MMSA22.ASC')
@@ -72,15 +73,15 @@ variables_of_interest = [
 df_filtered = df_sample[variables_of_interest]
 
 # Replace invalid/missing codes per BRFSS codebook (you may need to adjust based on documentation)
-df['WEIGHT2'] = pd.to_numeric(df['WEIGHT2'], errors='coerce')
-df['HEIGHT3'] = pd.to_numeric(df['HEIGHT3'], errors='coerce')
+df_filtered['WEIGHT2'] = pd.to_numeric(df_filtered['WEIGHT2'], errors='coerce')
+df_filtered['HEIGHT3'] = pd.to_numeric(df_filtered['HEIGHT3'], errors='coerce')
 
 # Set invalid values to NaN
-df.loc[df['WEIGHT2'] > 9998, 'WEIGHT2'] = None  # 9999 = Refused / 7777 = Don't know
-df.loc[df['HEIGHT3'] > 9998, 'HEIGHT3'] = None
+df_filtered.loc[df_filtered['WEIGHT2'] > 9998, 'WEIGHT2'] = None  # 9999 = Refused / 7777 = Don't know
+df_filtered.loc[df_filtered['HEIGHT3'] > 9998, 'HEIGHT3'] = None
 
 # Calculate BMI
-df['BMI'] = (df['WEIGHT2'] / (df['HEIGHT3'] ** 2)) * 703
+df_filtered['BMI'] = (df_filtered['WEIGHT2'] / (df_filtered['HEIGHT3'] ** 2)) * 703
 
 # Categorize BMI
 def bmi_category(bmi):
@@ -95,10 +96,10 @@ def bmi_category(bmi):
     else:
         return 'Obese'
 
-df['BMI_Category'] = df['BMI'].apply(bmi_category)
+df_filtered['BMI_Category'] = df_filtered['BMI'].apply(bmi_category)
 
 # Preview results
-print(df[['WEIGHT2', 'HEIGHT3', 'BMI', 'BMI_Category']].head())
+print(df_filtered[['WEIGHT2', 'HEIGHT3', 'BMI', 'BMI_Category']].head())
 
 # Save the filtered DataFrame to a new CSV file
 output_csv_path = os.path.join(extract_dir, 'filtered_data.csv')
@@ -112,4 +113,3 @@ print(df_filtered.head())
 # Additional analysis or processing can be done here
 
 # End of script
-
