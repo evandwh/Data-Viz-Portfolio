@@ -2,6 +2,7 @@
 # Author: Evan Whitfield
 # Date: 08/06/2025 
 # Description: Data Extraction and Analysis Script
+# Found several areas in the data once extracted and pulled into a CSV file. Needs further inspection, tabling for now.
 ###########################
 
 #needed imports
@@ -113,3 +114,4 @@ print(df_filtered.head())
 # Additional analysis or processing can be done here
 
 # End of script
+
