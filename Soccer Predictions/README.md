@@ -1,6 +1,6 @@
 # Soccer Analytics Portfolio Project ⚽📊
 
-![Python](https://img.shields.io/badge/python-3.11-blue?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/python-3.13-blue?logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-1.6-green?logo=pandas&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/scikit--learn-1.3-orange?logo=scikit-learn&logoColor=white)
 
