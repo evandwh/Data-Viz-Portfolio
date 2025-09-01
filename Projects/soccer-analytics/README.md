@@ -28,5 +28,4 @@ This project showcases advanced soccer analytics using **StatsBomb Open Data** t
 ## Installation
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/evandwh/soccer-analytics-portfolio.git
-   cd soccer-analytics-portfolio
+   git clone https://github.com/evandwh/Data-Viz-Portfolio/soccer-analytics-portfolio.git
